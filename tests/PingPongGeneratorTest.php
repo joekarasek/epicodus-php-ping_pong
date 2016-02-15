@@ -13,7 +13,20 @@
             $result = $test_PingPongGenerator->generatePingPongArray($input);
 
             //Assert
-            $this->assertEquals(array(1,2,3,4), $result);
+            $this->assertEquals(array(1,2,'ping',4), $result);
+        }
+
+        function test_generatePingPongArray_ping()
+        {
+            //Arrange
+            $test_PingPongGenerator = new PingPongGenerator;
+            $input = 6;
+
+            //Act
+            $result = $test_PingPongGenerator->generatePingPongArray($input);
+
+            //Assert
+            $this->assertEquals(array(1,2,'ping',4,5,"ping"), $result);
         }
     }
 
