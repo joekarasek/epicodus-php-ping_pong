@@ -8,6 +8,8 @@
                 $item_to_push = $i;
                 if ($i % 3 == 0) {
                     $item_to_push = 'ping';
+                } elseif ($i % 5 == 0) {
+                    $item_to_push = 'pong';
                 }
                 array_push($result_array, $item_to_push);
             }
