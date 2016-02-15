@@ -6,7 +6,9 @@
             $result_array = array();
             for ($i=1; $i <= $input_number ; $i++) {
                 $item_to_push = $i;
-                if ($i % 3 == 0) {
+                if ($i % 15 == 0) {
+                    $item_to_push = 'ping-pong';
+                } elseif ($i % 3 == 0) {
                     $item_to_push = 'ping';
                 } elseif ($i % 5 == 0) {
                     $item_to_push = 'pong';
